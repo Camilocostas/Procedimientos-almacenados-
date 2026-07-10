@@ -4,7 +4,7 @@ DELIMITER //
 CREATE PROCEDURE mostrar_salario_empleados(IN salarioMayor DECIMAL(10,2))
 
 BEGIN 
-SELECT empleado, salario
+SELECT CONCAT(nombre, ' ', apellido) AS empleado, salario
 FROM empleados
 WHERE salario >= salarioMayor;
 END //
